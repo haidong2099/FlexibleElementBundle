@@ -10,6 +10,12 @@
             "homepage": "https://github.com/guavestudios"
         }
     ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/guavestudios/contao-visualradio"
+        }
+    ],
     "require": {
         "php": "^7.1",
         "contao/core-bundle": ">=4.4 || <5.0",
