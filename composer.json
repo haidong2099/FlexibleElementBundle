@@ -1,0 +1,35 @@
+{
+    "name": "guave/flexibleelement-bundle",
+    "description": "",
+    "type": "contao-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rodrigo Stadler",
+            "email": "rodrigo.stadler@guavestudios.com",
+            "homepage": "https://github.com/guavestudios"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "contao/core-bundle": ">=4.4 || <5.0",
+        "symfony/framework-bundle": "^3.4 || ^4.0",
+        "guave/contao-visualradio": "dev-contao4"
+    },
+    "conflict": {
+        "contao/core": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "extra": {
+        "contao-manager-plugin": "Guave\\FlexibleElementBundle\\ContaoManager\\Plugin"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Guave\\FlexibleElementBundle\\": "src/"
+        }
+    }
+}
