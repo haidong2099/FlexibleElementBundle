@@ -16,9 +16,7 @@ class ContentFlexibleElement extends ContentElement
      */
     protected function compile(): void
     {
-        global $objPage;
-
-        $this->Template->multiSRC = self::prepareImages($this, "orderSRC");
+        $this->Template->flexibleImage = self::prepareImages($this, 'orderSRC');
     }
 
     /**
@@ -38,10 +36,8 @@ class ContentFlexibleElement extends ContentElement
         if (TL_MODE === 'BE') {
             if ($tmpl !== null) {
                 return '<div><span>FlexibleElement</span><br><br>'.Image::getHtml(
-                        static::getIconPath().'/'.$tmpl['id'].$GLOBALS['TL_FLEXIBLEELEMENT']['iconext'],
-                        $label,
-                        'title="'.specialchars($label).'"'
-                    ).'</div>';
+                    static::getIconPath().'/'.$tmpl['id'].$GLOBALS['TL_FLEXIBLEELEMENT']['iconExt']
+                ).'</div>';
             }
 
             return '<div><span>FlexibleElement</span><br><br>'.$tmplStr.'</div>';
@@ -54,7 +50,7 @@ class ContentFlexibleElement extends ContentElement
     {
         global $GLOBALS;
 
-        return $GLOBALS['TL_FLEXIBLEELEMENT']['iconpath'];
+        return $GLOBALS['TL_FLEXIBLEELEMENT']['iconPath'];
     }
 
     /**
@@ -91,7 +87,7 @@ class ContentFlexibleElement extends ContentElement
             $imagesArr = unserialize($obj->$attr);
             foreach ($imagesArr as $image) {
                 $images[] = static::getImageData(FilesModel::findByUuid($image));
-            };
+            }
 
             $obj->$attr = $images;
         } else if (is_array($obj->$attr)) {
