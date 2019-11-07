@@ -30,14 +30,14 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['elementTemplate'] = [
 $GLOBALS['TL_DCA']['tl_content']['fields']['flexibleTitle'] = [
     'label'     => &$GLOBALS['TL_LANG']['tl_content']['flexibleTitle'],
     'inputType' => 'text',
-    'eval'      => ['tl_class' => 'w50 clr'],
+    'eval'      => ['tl_class' => 'w100 clr'],
     'sql'       => 'varchar(255) NULL',
 ];
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['flexibleSubtitle'] = [
     'label'     => &$GLOBALS['TL_LANG']['tl_content']['flexibleSubtitle'],
     'inputType' => 'textarea',
-    'eval'      => ['rows' => 10, 'cols' => 100, 'tl_class' => 'w50 clr'],
+    'eval'      => ['rows' => 10, 'cols' => 100, 'tl_class' => 'w100 clr'],
     'sql'       => 'text NULL',
 ];
 

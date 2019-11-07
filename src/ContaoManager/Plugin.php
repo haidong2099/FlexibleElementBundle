@@ -8,7 +8,7 @@ use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use Guave\FlexibleElementBundle\GuaveFlexibleElementBundle;
-use Guave\Visualradio\GuaveVisualradioBundle;
+use Guave\Visualradio\GuaveVisualRadioBundle;
 
 class Plugin implements BundlePluginInterface
 {
@@ -20,7 +20,7 @@ class Plugin implements BundlePluginInterface
     {
         return [
             BundleConfig::create(GuaveFlexibleElementBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class, ContaoManagerBundle::class, GuaveVisualradioBundle::class])
+                ->setLoadAfter([ContaoCoreBundle::class, ContaoManagerBundle::class, GuaveVisualRadioBundle::class])
                 ->setReplace(['flexibleelement', 'visualradio'])
         ];
     }

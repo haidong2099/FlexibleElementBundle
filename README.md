@@ -1,12 +1,12 @@
 # Flexible Element Bundle
 This contao module adds a Content Element that allows you to use a specific layout.
 
-# Requirements
+### Requirements
 Contao >4 (tested with 4.8)
 <br>
 this library depends on visualradio (https://github.com/guavestudios/contao-visualradio)
 
-# Install
+### Install
 - Add the following to your `composer.json`: 
 ```JSON
 {
