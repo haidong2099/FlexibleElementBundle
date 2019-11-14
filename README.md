@@ -10,20 +10,15 @@ this library depends on visualradio (https://github.com/guavestudios/contao-visu
 - Add the following to your `composer.json`: 
 ```JSON
 {
-    "respositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/guavestudios/FlexibleElementBundle"
-        }
-    ],
     "require": {
-        "guave/flexibleelement-bundle": "1.0"
+        "guave/flexibleelement-bundle": "^1.0"
     }
 }
 ```
 - Execute `composer update`
-- Execute `php vendor/php/contao-console install assets`
-- Add the following into your `src/Resources/contao/config/config.php`:
+
+### Usage
+- To change which fields are shown or add a new one, add a "templates" array into your `src/Resources/contao/config/config.php`:
 ```PHP
 <?php
 $GLOBALS['TL_FLEXIBLEELEMENT']['templates'] = [
@@ -32,10 +27,8 @@ $GLOBALS['TL_FLEXIBLEELEMENT']['templates'] = [
         'template' => 'content-elements/ce_2column-text',
     ],
 ];
-
-$GLOBALS['TL_FLEXIBLEELEMENT']['iconPath'] = 'files/<project>/images/contentelements';
 ```
-- Add the following into your `src/Resource/contao/dca/tl_content.php`:
+- If you add a new field, add a new subpalette into your `src/Resource/contao/dca/tl_content.php`:
 ```PHP
 <?php
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['elementTemplate_flexible-2column-text'] = 'flexibleTitle,flexibleText,flexibleTextColumn';
