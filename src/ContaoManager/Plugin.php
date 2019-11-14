@@ -8,7 +8,7 @@ use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use Guave\FlexibleElementBundle\GuaveFlexibleElementBundle;
-use Guave\Visualradio\GuaveVisualRadioBundle;
+use Guave\VisualRadio\GuaveVisualRadioBundle;
 
 class Plugin implements BundlePluginInterface
 {

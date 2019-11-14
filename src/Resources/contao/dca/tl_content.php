@@ -9,6 +9,7 @@ array_insert(
 );
 $GLOBALS['TL_DCA']['tl_content']['palettes']['flexibleElement'] = '{type_legend},type;{config_legend},elementTemplate;{template_legend:hide},customTpl;';
 
+$GLOBALS['TL_DCA']['tl_content']['subpalettes']['elementTemplate_flexible-1col-text'] = 'flexibleTitle,flexibleSubtitle,flexibleText';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['elementTemplate_flexible-2col-text'] = 'flexibleTitle,flexibleSubtitle,flexibleText,flexibleTextColumn';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['elementTemplate_flexible-2col-txt-img'] = 'flexibleTitle,flexibleSubtitle,flexibleText,flexibleImage';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['elementTemplate_flexible-2col-img-txt'] = 'flexibleTitle,flexibleSubtitle,flexibleImage,flexibleText';

@@ -4,6 +4,10 @@ $GLOBALS['TL_CTE']['flexibleElement']['flexibleElement'] = Guave\FlexibleElement
 
 $GLOBALS['TL_FLEXIBLEELEMENT']['templates'] = [
     [
+        'id'       => 'flexible-1col-text',
+        'template' => 'ce_1col-text',
+    ],
+    [
         'id'       => 'flexible-2col-text',
         'template' => 'ce_2col-text',
     ],
@@ -17,5 +21,5 @@ $GLOBALS['TL_FLEXIBLEELEMENT']['templates'] = [
     ],
 ];
 
-$GLOBALS['TL_FLEXIBLEELEMENT']['iconPath'] = 'files/project/images/contentelements';
+$GLOBALS['TL_FLEXIBLEELEMENT']['iconPath'] = 'web/bundles/guaveflexibleelement/assets';
 $GLOBALS['TL_FLEXIBLEELEMENT']['iconExt']  = '.jpg';
