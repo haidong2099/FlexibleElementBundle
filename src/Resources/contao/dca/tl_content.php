@@ -60,7 +60,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['flexibleImage'] = [
     'label'         => &$GLOBALS['TL_LANG']['tl_content']['flexibleImage'],
     'exclude'       => true,
     'inputType'     => 'fileTree',
-    'eval'          => ['files' => true, 'fieldType' => 'checkbox', 'multiple' => true, 'orderField' => 'orderSRC'],
+    'eval'          => ['files' => true, 'fieldType' => 'checkbox', 'multiple' => true, 'orderField' => 'orderSRC', 'tl_class' => 'w50 clr'],
     'sql'           => 'blob NULL',
     'load_callback' => [
         ['tl_content', 'setMultiSrcFlags'],
