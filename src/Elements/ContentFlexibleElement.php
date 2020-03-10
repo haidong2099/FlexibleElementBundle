@@ -2,9 +2,9 @@
 
 namespace Guave\FlexibleElementBundle\Elements;
 
+use Contao\BackendTemplate;
 use Contao\ContentElement;
 use FilesModel;
-use Image;
 
 class ContentFlexibleElement extends ContentElement
 {
@@ -34,13 +34,13 @@ class ContentFlexibleElement extends ContentElement
         $this->strTemplate = $tmplStr;
 
         if (TL_MODE === 'BE') {
-            if ($tmpl !== null) {
-                return '<div><span>FlexibleElement</span><br><br>'.Image::getHtml(
-                    static::getIconPath().'/'.$tmpl['id'].$GLOBALS['TL_FLEXIBLEELEMENT']['iconExt']
-                ).'</div>';
-            }
+            $this->strTemplate = 'be_wildcard';
+            $this->Template = new BackendTemplate($this->strTemplate);
 
-            return '<div><span>FlexibleElement</span><br><br>'.$tmplStr.'</div>';
+            $this->Template->title = $this->flexibleTitle;
+            $this->Template->wildcard = $this->flexibleSubtitle;
+
+            return $this->Template->parse();
         }
 
         return parent::generate();
