@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * Content Element
+ */
+$GLOBALS['TL_LANG']['tl_content']['flexibleElement'] = 'Flexible Element';
+
+/**
  * Labels
  */
 $GLOBALS['TL_LANG']['tl_content']['config_legend'] = 'Configuration';

@@ -7,15 +7,7 @@ Contao >4 (tested with 4.8)
 this library depends on visualradio (https://github.com/guavestudios/contao-visualradio)
 
 ### Install
-- Add the following to your `composer.json`: 
-```JSON
-{
-    "require": {
-        "guave/flexibleelement-bundle": "^1.0"
-    }
-}
-```
-- Execute `composer update`
+`composer require guave/flexibleelement-bundle`
 
 ### Usage
 - To change which fields are shown or add a new one, add a "templates" array into your `src/Resources/contao/config/config.php`:
