@@ -4,7 +4,7 @@ namespace Guave\FlexibleElementBundle\Elements;
 
 use Contao\BackendTemplate;
 use Contao\ContentElement;
-use FilesModel;
+use Contao\FilesModel;
 
 class ContentFlexibleElement extends ContentElement
 {
@@ -82,16 +82,20 @@ class ContentFlexibleElement extends ContentElement
 
     public static function prepareImages(&$obj, $attr)
     {
+        $images = [];
+
         if (is_string($obj->$attr)) {
-            $images    = [];
             $imagesArr = unserialize($obj->$attr);
+
             foreach ($imagesArr as $image) {
                 $images[] = static::getImageData(FilesModel::findByUuid($image));
             }
 
             $obj->$attr = $images;
-        } else if (is_array($obj->$attr)) {
-            return $obj->$attr;
+        } else {
+            if (is_array($obj->$attr)) {
+                return $obj->$attr;
+            }
         }
 
         return $images;
@@ -103,18 +107,11 @@ class ContentFlexibleElement extends ContentElement
             return;
         }
 
-        if (!$objModel instanceof \Contao\FilesModel) {
+        if (!$objModel instanceof FilesModel) {
             return;
         }
 
-        if ($objModel) {
-            if (!is_file(TL_ROOT.'/'.$objModel->path)) {
-                //try to load from s3
-                //S3::loadFileFromS3($objModel->path);
-            }
-        }
         if (is_file(TL_ROOT.'/'.$objModel->path)) {
-
             $meta = unserialize($objModel->meta);
             $meta = $meta[$GLOBALS['TL_LANGUAGE']];
 
@@ -125,6 +122,6 @@ class ContentFlexibleElement extends ContentElement
             ];
         }
 
-        return null;
+        return [];
     }
 }
