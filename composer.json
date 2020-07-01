@@ -13,7 +13,7 @@
     "require": {
         "php": "^7.2",
         "contao/core-bundle": "^4.4",
-        "guave/visualradio-bundle": "^1.1"
+        "guave/visualradio-bundle": "^1.2"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.0"
