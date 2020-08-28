@@ -1,33 +1,33 @@
 {
-    "name": "guave/flexibleelement-bundle",
-    "description": "",
-    "type": "contao-bundle",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Rodrigo Stadler",
-            "email": "rodrigo.stadler@guavestudios.com",
-            "homepage": "https://github.com/guavestudios"
-        }
-    ],
-    "require": {
-        "php": "^7.2",
-        "contao/core-bundle": "^4.4",
-        "guave/visualradio-bundle": "^1.2"
-    },
-    "require-dev": {
-        "contao/manager-plugin": "^2.0"
-    },
-    "conflict": {
-        "contao/manager-plugin": "<2.0 || >=3.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Guave\\FlexibleElementBundle\\": "src/"
-        }
-    },
-    "extra": {
-        "contao-manager-plugin": "Guave\\FlexibleElementBundle\\ContaoManager\\Plugin"
-    },
-    "minimum-stability": "stable"
+  "name": "guave/flexibleelement-bundle",
+  "description": "",
+  "type": "contao-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Rodrigo Stadler",
+      "email": "rodrigo.stadler@guavestudios.com",
+      "homepage": "https://github.com/guavestudios"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "contao/core-bundle": "^4.4",
+    "guave/visualradio-bundle": "^1.2"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.0"
+  },
+  "conflict": {
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Guave\\FlexibleElementBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "Guave\\FlexibleElementBundle\\ContaoManager\\Plugin"
+  },
+  "minimum-stability": "stable"
 }
