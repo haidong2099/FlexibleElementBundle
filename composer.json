@@ -28,7 +28,7 @@
   "extra": {
     "contao-manager-plugin": "Guave\\FlexibleElementBundle\\ContaoManager\\Plugin"
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "config": {
     "allow-plugins": {
       "contao-components/installer": true,
