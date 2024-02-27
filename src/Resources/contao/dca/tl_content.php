@@ -1,12 +1,4 @@
 <?php
-
-// array_insert(
-//     $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'],
-//     null,
-//     [
-//         'elementTemplate',
-//     ]
-// );
 array_splice(
     $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'],
     0,
