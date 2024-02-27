@@ -1,8 +1,9 @@
 <?php
-
-array_insert(
+//change array_insert to array_splice
+array_splice(
     $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'],
-    null,
+    0,
+    0,
     [
         'elementTemplate',
     ]
