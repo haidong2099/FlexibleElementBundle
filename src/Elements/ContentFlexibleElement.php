@@ -29,6 +29,7 @@ class ContentFlexibleElement extends ContentElement
         } else {
             // $tmpl    = static::getTemplateByLayout($this->elementTemplate);
             //Only for Contao 4.9 in Contao 5.* table tl_content  has no field elementTemplate with value 'flexible-1col-text'
+            //[TODO]: Find a better solution for this instead of hardcoding the value
             $tmpl    = static::getTemplateByLayout('flexible-1col-text');
             $tmplStr = $tmpl['template'];
         }
