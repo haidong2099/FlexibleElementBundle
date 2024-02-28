@@ -27,7 +27,9 @@ class ContentFlexibleElement extends ContentElement
         if ($this->customTpl) {
             $tmplStr = str_replace('.html5', '', $this->customTpl);
         } else {
-            $tmpl    = static::getTemplateByLayout($this->elementTemplate);
+            // $tmpl    = static::getTemplateByLayout($this->elementTemplate);
+            //Only for Contao 4.9 in Contao 5.* table tl_content  has no field elementTemplate with value 'flexible-1col-text'
+            $tmpl    = static::getTemplateByLayout('flexible-1col-text');
             $tmplStr = $tmpl['template'];
         }
 
