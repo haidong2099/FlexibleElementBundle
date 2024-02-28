@@ -110,7 +110,9 @@ class ContentFlexibleElement extends ContentElement
         if (!$objModel instanceof FilesModel) {
             return;
         }
-
+        if (!defined('TL_ROOT')) {
+            define('TL_ROOT', $_SERVER['DOCUMENT_ROOT']);
+        }
         if (is_file(TL_ROOT.'/'.$objModel->path)) {
             $meta = unserialize($objModel->meta);
             $meta = $meta[$GLOBALS['TL_LANGUAGE']];
