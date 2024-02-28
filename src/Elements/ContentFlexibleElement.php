@@ -33,11 +33,7 @@ class ContentFlexibleElement extends ContentElement
 
         $this->strTemplate = $tmplStr;
 
-        if(!defined('TL_MODE')) {
-          define('TL_MODE', 'FE');
-        }
-
-        if (TL_MODE === 'BE') {
+        if (defined('TL_MODE') && TL_MODE === 'BE') {
             $this->strTemplate = 'be_wildcard';
             $this->Template = new BackendTemplate($this->strTemplate);
 
