@@ -88,7 +88,8 @@ class ContentFlexibleElement extends ContentElement
             $imagesArr = unserialize($obj->$attr);
 
             foreach ($imagesArr as $image) {
-                $images[] = static::getImageData(FilesModel::findByUuid($image));
+                $imageUuid = $image;
+                $images[] = static::getImageData(FilesModel::findByUuid($imageUuid));
             }
 
             $obj->$attr = $images;
